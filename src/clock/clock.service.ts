@@ -11,15 +11,11 @@ export class ClockService {
   private stopped:Boolean;
 
   constructor() {
-    //this.clock = Observable.create(tick => new Date() ).share();
-    console.log('service')
     this.stopped = true;
-    //this.startClock();
   }
 
   startClock() {
   this.stopped = false;
-  console.log('startingclock')
     this.startDate = new Date();
     this.clock = Observable.interval(1000).map((tick) => {
     console.log(tick)
@@ -29,14 +25,11 @@ export class ClockService {
   }
 
   stopClock() {
-  console.log('stop the fucking clock')
+  console.log('stop the clock')
     this.stopped = true;
   }
 
-//
   getClock(): any {
-  console.log('getting clock')
     return this.stopped ? '' : this.clock;
   }
-
 }

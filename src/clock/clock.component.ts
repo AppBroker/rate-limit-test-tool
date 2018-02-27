@@ -24,11 +24,7 @@ export class ClockComponent implements OnDestroy, OnInit {
     this.time = '00:00:00';
   }
 
-
-
   start() {
-
-  console.log('start clock');
     this.clockService.startClock();
     this._clockSubscription = this.clockService.getClock().subscribe(timer => {
       this.zone.run(() => {
@@ -38,7 +34,6 @@ export class ClockComponent implements OnDestroy, OnInit {
   }
 
   stop() {
-    console.log('Stopping',this.clockService.getClock());
     this._clockSubscription.unsubscribe();
     this.clockService.stopClock();
   }
