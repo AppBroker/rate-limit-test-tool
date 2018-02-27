@@ -4,7 +4,7 @@
     <h2>
       Welcome to the {{ title }}!
     </h2>
-    <h2>Get ready to fuck some shit up: </h2>
+    <h2>Add your endpoint and amount of times to hit: </h2>
   </div>
   <div class="row">
     <div class="col-sm-6">
@@ -26,12 +26,8 @@
       <input #textbox type="text" [(ngModel)]="endpointValue" type="search" class="bx--search-input" id="api__input" placeholder="API Endpoint..." title="API Endpoint...">
     </div>
     <div class="col-md-2 margin-bottom4-div">
-      <span class="tiny">( Hit me 50000 times bitch )</span>
+      <span class="tiny">( Hit me x times (keep it low to start) )</span>
       <input type="search" class="bx--search-input" [(ngModel)]="amountHitsValue" id="rep__input" placeholder="Repetitions..." title="Repetitions...">
-    </div>
-    <div class="col-md-2 margin-bottom4-div">
-      <span class="tiny">( 1000 = 1 second )</span>
-      <input type="search" class="bx--search-input" [(ngModel)]="hitEveryValue" id="rate__input" placeholder="Rate..." title="Rate...">
     </div>
   </div>
   <div class="row">

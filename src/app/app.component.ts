@@ -8,13 +8,11 @@ import { ClockComponent } from '../clock/clock.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Patriot';
+  title = 'Rate Limiter Tool';
   hits = 0;
-  seconds = 0;
   squeal = '';
   endpointValue = '';
   amountHitsValue = 10;
-  hitEveryValue = 1000; //Milliseconds
   @ViewChild('child')
   private clock: ClockComponent;
 
@@ -48,10 +46,6 @@ export class AppComponent {
         })
       ));
     }
-  }
-
-  reportDone(): void {
-    console.log('Reporting doen');
   }
 
   start(): void {
