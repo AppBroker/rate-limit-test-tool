@@ -1,0 +1,52 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container-fluid">
+  <div style="text-align:center">
+    <h2>
+      Welcome to the {{ title }}!
+    </h2>
+    <h2>Get ready to fuck some shit up: </h2>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <app-clock-component #child></app-clock-component>
+    </div>
+    <div class="col-sm-6">
+      <div style="text-align:center">
+        <span>Endpoint Hit</span>
+        <br/>
+        <span class="huge">{{ hits }}</span>
+        <br/>
+        <span>Times</span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 margin-bottom4-div">
+      <span class="tiny">( http://www.yousite.com/api/v1/yourendpoint )</span>
+      <input #textbox type="text" [(ngModel)]="endpointValue" type="search" class="bx--search-input" id="api__input" placeholder="API Endpoint..." title="API Endpoint...">
+    </div>
+    <div class="col-md-2 margin-bottom4-div">
+      <span class="tiny">( Hit me 50000 times bitch )</span>
+      <input type="search" class="bx--search-input" [(ngModel)]="amountHitsValue" id="rep__input" placeholder="Repetitions..." title="Repetitions...">
+    </div>
+    <div class="col-md-2 margin-bottom4-div">
+      <span class="tiny">( 1000 = 1 second )</span>
+      <input type="search" class="bx--search-input" [(ngModel)]="hitEveryValue" id="rate__input" placeholder="Rate..." title="Rate...">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 margin-bottom4-div ">
+      <div class="float-right">
+        <button (click)="start()">Boom</button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <textarea  class="bx--search-textarea tiny" placeholder="Watch here..." title="Watch here...">{{ squeal }}</textarea>
+    </div>
+  </div>
+</div>
+
+
+
