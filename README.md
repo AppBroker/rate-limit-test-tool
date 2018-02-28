@@ -1,6 +1,6 @@
 # rate-limit-test-tool
 Rate Limit Test Tool UI, built in Angular 5 with RXJS - Hits a Target API Endpoint X Amount of Times, Analyses Results Accordingly Over Time.
-Useful UI for testing rate limiting on your application API endpoints.
+Useful UI for testing rate limiting and replicating brute force attacks to an extent on your application API endpoints.
 
 ##Installation
 `npm install`
