@@ -8,11 +8,18 @@ import { MomentModule } from 'angular2-moment/moment.module';
 import { AppComponent } from './app.component';
 import { ClockComponent } from '../clock/clock.component';
 import { ClockService } from '../clock/clock.service';
+import { ListComponent } from '../list/list.component';
+import { ExpComponent } from '../list/exp.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClockComponent
+    ClockComponent,
+    ListComponent,
+    ExpComponent
+  ],
+  entryComponents: [
+    ExpComponent
   ],
   imports: [
     BrowserModule,

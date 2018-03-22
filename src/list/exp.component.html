@@ -1,0 +1,22 @@
+<form novalidate>
+  <div class="row  margin-bottom4-div">
+      <div class="col-sm-5 margin-bottom4-div">
+        <input type="text" name="headerName"
+               [(ngModel)]= "headerName"
+               placeholder="Name"
+               class="bx--search-input">
+      </div>
+
+      <div class="col-sm-5 margin-bottom4-div">
+        <input type="text" name='headerValue'
+               placeholder="Value"
+               [(ngModel)]= "headerValue"
+               class="bx--search-input" >
+      </div>
+
+      <div class="col-sm-2 margin-bottom4-div">
+        <button type="button" class="btn btn-default"
+                (click)="removeObject()" > Remove</button>
+      </div>
+  </div>
+</form>

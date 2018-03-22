@@ -8,7 +8,7 @@ export class ClockService {
 
   private clock: Observable<any>;
   private startDate: Date;
-  private stopped:Boolean;
+  private stopped: Boolean;
 
   constructor() {
     this.stopped = true;
@@ -21,7 +21,7 @@ export class ClockService {
     console.log(tick)
     return this.stopped ? '' : moment.utc(moment(new Date(), 'DD/MM/YYYY HH:mm:ss')
       .diff(moment(this.startDate, 'DD/MM/YYYY HH:mm:ss')))
-      .format('HH:mm:ss') }).share();
+      .format('HH:mm:ss'); } ).share();
   }
 
   stopClock() {

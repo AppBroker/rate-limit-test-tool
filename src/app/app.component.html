@@ -1,10 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="container-fluid">
+<div class="container-fluid margin-20-div">
   <div style="text-align:center">
     <h2>
-      Welcome to the {{ title }}!
+      Welcome to your {{ title }}! Add your endpoint and amount of times to hit:
     </h2>
-    <h2>Add your endpoint and amount of times to hit: </h2>
   </div>
   <div class="row">
     <div class="col-sm-6">
@@ -21,25 +20,67 @@
     </div>
   </div>
   <div class="row">
+    <div class="col-md-12 margin-bottom4-div">
+      <table>
+        <tr>
+          <td>
+            <app-list-component #child></app-list-component>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 margin-bottom4-div">
+    <table>
+      <thead>
+      <td class="tiny">HTTP Request Type:</td>
+      <td></td>
+      </thead>
+      <tbody>
+      <tr *ngFor="let option of restOptions; let idx = index">
+        <td class="tiny">{{ option.description }}</td>
+        <td>
+          <input type="radio" name="radiogroup"
+                 [checked]="(idx === 0)"
+                 [value]="option.id"
+                 (change)="onSelectionChange(option)"
+          >
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-md-8 margin-bottom4-div">
       <span class="tiny">( http://www.yousite.com/api/v1/yourendpoint )</span>
       <input #textbox type="text" [(ngModel)]="endpointValue" type="search" class="bx--search-input" id="api__input" placeholder="API Endpoint..." title="API Endpoint...">
     </div>
     <div class="col-md-2 margin-bottom4-div">
-      <span class="tiny">( Hit me x times (keep it low to start) )</span>
+      <span class="tiny">( Hit me x times )</span>
       <input type="search" class="bx--search-input" [(ngModel)]="amountHitsValue" id="rep__input" placeholder="Repetitions..." title="Repetitions...">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12  margin-bottom4-div">
+      <span class="tiny">( OR - Pass json objects here, this will override the endpoint hit x and use the length of the array instead )</span>
+      <input class="bx--search-textarea tiny" [(ngModel)]="jsonStr"
+                placeholder="Paste your json objects here in this format [ {...} , {...} , {...} ]..."
+                title="Paste your json objects here in this format [ {...} , {...} , {...} ]..."
+                [disabled]="(selectedRestOption.id !== 0 && selectedRestOption.id !== 3) ? false : true"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <textarea  class="bx--search-textarea tiny" placeholder="Watch results here..." title="Watch results here...">{{ squeal }}</textarea>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12 margin-bottom4-div ">
       <div class="float-right">
-        <button (click)="start()">Boom</button>
+        <button class="btn btn-primary" (click)="start()">Brute ur Rate Limiting!</button>
       </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      <textarea  class="bx--search-textarea tiny" placeholder="Watch here..." title="Watch here...">{{ squeal }}</textarea>
     </div>
   </div>
 </div>
