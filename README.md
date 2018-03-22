@@ -22,5 +22,5 @@ Once installed run from local
 Observe local running on
 http://localhost:4200
 
-##Online Demo
+## Online Demo
 View an online demo  [Here](http://rate-limit-test-tool.mybluemix.net)
