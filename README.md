@@ -2,6 +2,9 @@
 Rate Limit Test Tool UI, built in Angular 5 with RXJS - Hits a Target API Endpoint X Amount of Times, Analyses Results Accordingly Over Time.
 Useful UI for testing rate limiting and replicating brute force attacks to an extent on your application API endpoints.
 
+One would expect when hit x amount of times within x amount of time an API endpoint would reject a request to a potentially malicious user. Sadly this is not the case with alot of today's applications not applying security against brute force attacks. 
+This tool helps you to test rate limiting on your api's when using libraries like [express-brute](https://www.npmjs.com/package/express-brute) and other types of rate limiting software.
+
 ## Features
 Hit endpoints using GET, POST, PUT, DELETE
 
