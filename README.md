@@ -26,4 +26,4 @@ Observe local running on
 http://localhost:4200
 
 ## Online Demo
-View an online demo  [Here](http://rate-limit-test-tool.mybluemix.net)
+View an online demo  [Here](http://rate-limit-test-tool-pregnant-copyrighter.eu-gb.mybluemix.net)

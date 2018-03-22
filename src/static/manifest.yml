@@ -1,0 +1,5 @@
+applications:
+- name: rate-limit-test-tool
+  random-route: true
+  memory: 64M
+  buildpack: staticfile_buildpack
